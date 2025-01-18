@@ -9,8 +9,8 @@ public class MainFrame extends JFrame {
     public MainFrame() {
         this.setTitle("Pendulum Simulator");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLocation(600, 100);
-        setSize(700, 700);
+        setSize(900, 900);
+        setLocationRelativeTo(null);
         add((Component) (pendulumDisplay = createPendulumDisplay()));
     }
 
