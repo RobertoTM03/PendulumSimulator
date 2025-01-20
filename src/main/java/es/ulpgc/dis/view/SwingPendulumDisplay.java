@@ -56,10 +56,7 @@ public class SwingPendulumDisplay extends JPanel implements PendulumDisplay {
             public void mouseDragged(MouseEvent e) {
                 if (draggedCircle.isEmpty())return;
                 Coordinates coordinates = Coordinates.at(e.getX(), e.getY());
-                draggedCircle.ifPresent(c -> {
-                    System.out.println(coordinates);
-                    grabbed.at(new Circle(c.id(), coordinates.x, coordinates.y, c.r()));
-                });
+                draggedCircle.ifPresent(c -> grabbed.at(new Circle(c.id(), coordinates.x, coordinates.y, c.r())));
             }
 
             @Override

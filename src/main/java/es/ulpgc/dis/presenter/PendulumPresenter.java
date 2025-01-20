@@ -127,7 +127,6 @@ public class PendulumPresenter {
 
     private Pendulum simulatePendulum(Pendulum pendulum) {
         if (grabbedPendulum != null && pendulum.id().equals(grabbedPendulum.id())) {
-            System.out.println(grabbedPendulum);
             return grabbedPendulum;
         }
         return simulator.simulate(pendulum);
